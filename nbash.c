@@ -159,6 +159,20 @@ void cmd_interpreter( char *mystring )
                  foundcmd = 1;
               }
 
+              // nfind 
+              if ( fetchline[0] == 'n' )
+              if ( fetchline[1] == 'f' )
+              if ( fetchline[2] == 'i' )
+              if ( fetchline[3] == 'n' )
+              if ( fetchline[4] == 'd' )
+              if ( fetchline[5] == ' ' )
+              if ( foundcmd == 0 )
+              {
+                 runwith( " nfind  " , strtrim( strcut( fetchline, 5+2, strlen( fetchline ))) );
+                 foundcmd = 1;
+              }
+
+
               // vim 
               if ( fetchline[0] == 'v' )
               if ( fetchline[1] == 'i' )
@@ -166,10 +180,11 @@ void cmd_interpreter( char *mystring )
               if ( fetchline[3] == ' ' )
               if ( foundcmd == 0 )
               {
-                 strncpy( inputfield, strtrim( strcut( fetchline, 3+2, strlen( fetchline ))) , PATH_MAX );
- 	         printf( "%s\n", inputfield );
+                 runwith( " vim  " , strtrim( strcut( fetchline, 3+2, strlen( fetchline ))) );
                  foundcmd = 1;
               }
+
+
 
               // tc 
               if ( fetchline[0] == 't' )
