@@ -159,6 +159,17 @@ void cmd_interpreter( char *mystring )
                  foundcmd = 1;
               }
 
+              // bash (none)
+              if ( fetchline[0] == 'b' )
+              if ( fetchline[1] == 'a' )
+              if ( fetchline[2] == 's' )
+              if ( fetchline[3] == 'h' )
+              if ( foundcmd == 0 )
+              {
+                 system( " bash  " );
+                 foundcmd = 1;
+              }
+
               // nfind 
               if ( fetchline[0] == 'n' )
               if ( fetchline[1] == 'f' )
