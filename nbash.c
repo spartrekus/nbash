@@ -173,6 +173,16 @@ void cmd_interpreter( char *mystring )
               }
 
 
+              // lst 
+              if ( fetchline[0] == 'l' )
+              if ( fetchline[1] == 's' )
+              if ( fetchline[2] == 't' )
+              if ( foundcmd == 0 )
+              {
+                 system( " lst  " );
+                 foundcmd = 1;
+              }
+
               // vim 
               if ( fetchline[0] == 'v' )
               if ( fetchline[1] == 'i' )
@@ -267,8 +277,8 @@ int main( int argc, char *argv[])
        else if ( strcmp( string, "bye" )  == 0 )  gameover = 1;
 
 
-
     }
+    printf( "Bye!\n" );
     return 0;
 }
 
