@@ -234,11 +234,21 @@ void cmd_interpreter( char *mystring )
               // ls 
               if ( fetchline[0] == 'l' )
               if ( fetchline[1] == 's' )
+              if ( fetchline[2] == ' ' )
+              if ( foundcmd == 0 )
+              {
+                 runwith( " nls  " , strtrim( strcut( fetchline, 2+2, strlen( fetchline ))) );
+                 foundcmd = 1;
+              }
+              if ( fetchline[0] == 'l' )
+              if ( fetchline[1] == 's' )
               if ( foundcmd == 0 )
               {
                  system( " nls " );
                  foundcmd = 1;
               }
+
+
 
               // dir 
               if ( fetchline[0] == 'd' )
